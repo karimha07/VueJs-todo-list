@@ -1,0 +1,42 @@
+.app-container {
+    display: flex;
+
+}
+
+.input-container {
+    margin: 2rem;
+}
+
+.input-text {
+    font-size: 1.5rem;
+}
+
+.input-bar {
+    width: 20rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.todo {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 1rem 0.3rem;
+}
+
+.todo-item {
+    margin: 0.5rem 0.2rem;
+    cursor: pointer;
+}
+
+.todo-icon {
+    margin: 0 0.6rem;
+}
+.todo-icon:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.toggleTask {
+    text-decoration: line-through;
+}

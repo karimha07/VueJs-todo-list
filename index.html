@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app" class="app-container">
+      <div class="input-container input-text">
+        <label for=""> Give it a try</label>
+        <input
+          type="text"
+          placeholder="todo"
+          class="input-bar"
+          v-on:keyup.enter="addItem"
+          v-model="this.task"
+        />
+        <div class="todo">
+          <div v-for="(task, index) in todo" class="todo-item">
+            <div
+              style="display: inline;"
+              :class="{toggleTask: task.done}"
+              @click="toggleTask(index)"
+            >
+              {{ task.label }}
+            </div>
+            <div style="display: inline" class="todo-icon">
+              <i class="far fa-edit" v-on:click.prevent="updateItem(index)"></i>
+            </div>
+            <div style="display: inline" class="todo-icon">
+              <i class="far fa-trash-alt" v-on:click="removeItem(index)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
